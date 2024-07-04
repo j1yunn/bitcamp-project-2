@@ -50,13 +50,13 @@ public class App {
 
     private static void showMainMenu(Motivation motivation) {
         System.out.println("********************************************************************");
-        System.out.println("                                                                     ");
+        System.out.println("                                                                    ");
         System.out.println("████████  ██████  ██████   ██████      ██      ██ ███████ ████████ ");
         System.out.println("   ██    ██    ██ ██   ██ ██    ██     ██      ██ ██         ██    ");
         System.out.println("   ██    ██    ██ ██   ██ ██    ██     ██      ██ ███████    ██    ");
         System.out.println("   ██    ██    ██ ██   ██ ██    ██     ██      ██      ██    ██    ");
         System.out.println("   ██     ██████  ██████   ██████      ███████ ██ ███████    ██    ");
-        System.out.println("                                                                     ");
+        System.out.println("                                                                    ");
         System.out.println("********************************************************************");
         System.out.println("                                                                     ");
         motivation.viewRandomMotivation();  // 랜덤 동기부여 출력
