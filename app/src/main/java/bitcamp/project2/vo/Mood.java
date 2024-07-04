@@ -1,6 +1,5 @@
-package bitcamp.project2;
+package bitcamp.project2.vo;
 
-import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -122,26 +121,4 @@ public class Mood {
         }
     }
 
-    public void loadData() {
-        try (BufferedReader br = new BufferedReader(new FileReader(MOOD_FILE))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split(":");
-                moodMap.put(parts[0], parts[1]);
-            }
-        } catch (IOException e) {
-            System.out.println("기분 데이터를 로드하는 중 오류가 발생했습니다.");
-        }
-    }
-
-    public void saveData() {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(MOOD_FILE))) {
-            for (Map.Entry<String, String> entry : moodMap.entrySet()) {
-                bw.write(entry.getKey() + ":" + entry.getValue());
-                bw.newLine();
-            }
-        } catch (IOException e) {
-            System.out.println("기분 데이터를 저장하는 중 오류가 발생했습니다.");
-        }
-    }
 }

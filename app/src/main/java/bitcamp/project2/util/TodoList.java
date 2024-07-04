@@ -1,4 +1,4 @@
-package bitcamp.project2;
+package bitcamp.project2.util;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -145,6 +145,29 @@ public class TodoList {
         if (choice > 0 && choice <= goals.size()) {
             goals.remove(choice - 1);
             System.out.println("목표가 삭제되었습니다.");
+        } else if (choice == 0) {
+            return;
+        } else {
+            System.out.println("잘못된 선택입니다.");
+        }
+    }
+
+    public void changeStatus(Scanner scanner) {
+        System.out.println("완료 여부를 변경할 할 일을 선택하세요. (0: 이전으로 돌아가기):");
+        for (int i = 0; i < todos.size(); i++) {
+            System.out.println((i + 1) + ". " + todos.get(i));
+        }
+        int choice = scanner.nextInt();
+        scanner.nextLine();  // 개행 문자 제거
+        if (choice > 0 && choice <= todos.size()) {
+            String todo = todos.get(choice - 1);
+            if (todo.contains("(완료)")) {
+                todo = todo.replace("(완료)", "(미완료)");
+            } else if (todo.contains("(미완료)")) {
+                todo = todo.replace("(미완료)", "(완료)");
+            }
+            todos.set(choice - 1, todo);
+            System.out.println("완료 여부가 변경되었습니다.");
         } else if (choice == 0) {
             return;
         } else {

@@ -1,6 +1,5 @@
-package bitcamp.project2;
+package bitcamp.project2.vo;
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -44,25 +43,4 @@ public class Motivation {
         }
     }
 
-    public void loadData() {
-        try (BufferedReader br = new BufferedReader(new FileReader(MOTIVATION_FILE))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                motivations.add(line);
-            }
-        } catch (IOException e) {
-            System.out.println("동기부여 데이터를 로드하는 중 오류가 발생했습니다.");
-        }
-    }
-
-    public void saveData() {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(MOTIVATION_FILE))) {
-            for (String motivation : motivations) {
-                bw.write(motivation);
-                bw.newLine();
-            }
-        } catch (IOException e) {
-            System.out.println("동기부여 데이터를 저장하는 중 오류가 발생했습니다.");
-        }
-    }
 }

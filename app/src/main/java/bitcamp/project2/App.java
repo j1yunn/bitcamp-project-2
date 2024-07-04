@@ -1,5 +1,9 @@
 package bitcamp.project2;
 
+import bitcamp.project2.util.TodoList;
+import bitcamp.project2.vo.Mood;
+import bitcamp.project2.vo.Motivation;
+
 import java.util.Scanner;
 
 public class App {
@@ -16,9 +20,9 @@ public class App {
 
 
         // 데이터 로드
-        todoList.loadData();
-        motivation.loadData();
-        mood.loadData();
+//        todoList.loadData();
+//        motivation.loadData();
+//        mood.loadData();
 
         while (true) {
             showMainMenu(motivation);
@@ -40,9 +44,9 @@ public class App {
                     break;
                 case 5:
                     // 데이터 저장 및 프로그램 종료
-                    todoList.saveData();
-                    motivation.saveData();
-                    mood.saveData();
+//                    todoList.saveData();
+//                    motivation.saveData();
+//                    mood.saveData();
                     System.out.println("프로그램을 종료합니다.");
                     scanner.close();
                     System.exit(0);
@@ -128,7 +132,8 @@ public class App {
         System.out.println("2. 올해 목표 수정");
         System.out.println("3. 동기부여 수정");
         System.out.println("4. 오늘의 기분 수정");
-        System.out.println("5. 이전");
+        System.out.println("5. 완료 여부 변경");
+        System.out.println("6. 이전");
         System.out.print("입력: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // 개행 문자 제거
@@ -147,6 +152,8 @@ public class App {
                 mood.editMood(scanner);
                 break;
             case 5:
+                todoList.changeStatus(scanner);
+            case 6:
                 // 이전
                 break;
             default:
