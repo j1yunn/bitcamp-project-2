@@ -24,15 +24,13 @@ public class TodoList {
     }
 
     public void addGoal(Scanner scanner) {
-        System.out.print("시작 날짜 (YYYY-MM-DD): ");
-        String startDate = scanner.nextLine();
-        System.out.print("완료 날짜 (YYYY-MM-DD): ");
-        String endDate = scanner.nextLine();
+        System.out.print("연도 (YYYY): ");
+        String year = scanner.nextLine();
         System.out.print("카테고리: ");
         String category = scanner.nextLine();
         System.out.print("내용: ");
         String content = scanner.nextLine();
-        goals.add("[" + startDate + " - " + endDate + "]의 목표:\n" + content);
+        goals.add("[" + year + "]의 목표:\n" + content);
         System.out.println("목표가 추가되었습니다.");
     }
 
@@ -65,6 +63,22 @@ public class TodoList {
         }
         if (!found) {
             System.out.println("해당 월의 할 일이 없습니다.");
+        }
+    }
+
+    public void viewYearlyGoals(Scanner scanner) {
+        System.out.print("연도 (YYYY): ");
+        String year = scanner.nextLine();
+        System.out.println("[" + year + "]의 목표:");
+        boolean found = false;
+        for (String goal : goals) {
+            if (goal.startsWith("[" + year + "]")) {
+                System.out.println(goal);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("해당 연도의 목표가 없습니다.");
         }
     }
 
@@ -101,15 +115,13 @@ public class TodoList {
         int choice = scanner.nextInt();
         scanner.nextLine();  // 개행 문자 제거
         if (choice > 0 && choice <= goals.size()) {
-            System.out.print("시작 날짜 (YYYY-MM-DD): ");
-            String startDate = scanner.nextLine();
-            System.out.print("완료 날짜 (YYYY-MM-DD): ");
-            String endDate = scanner.nextLine();
+            System.out.print("연도 (YYYY): ");
+            String year = scanner.nextLine();
             System.out.print("카테고리: ");
             String category = scanner.nextLine();
             System.out.print("내용: ");
             String content = scanner.nextLine();
-            goals.set(choice - 1, "[" + startDate + " - " + endDate + "]의 목표:\n" + content);
+            goals.set(choice - 1, "[" + year + "]의 목표:\n" + content);
             System.out.println("목표가 수정되었습니다.");
         } else if (choice == 0) {
             return;

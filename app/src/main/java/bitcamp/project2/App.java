@@ -59,24 +59,31 @@ public class App {
 
     private static void showMainMenu(Motivation motivation) {
         motivation.viewRandomMotivation();  // 랜덤 동기부여 출력
-        System.out.println("                                                                     ");
+        System.out.println("*********************************");
+        System.out.println("                                ");
         System.out.println("1. 추가");
         System.out.println("2. 조회");
         System.out.println("3. 수정");
         System.out.println("4. 삭제");
         System.out.println("5. 종료");
-        System.out.println("                                                                     ");
-        System.out.println("********************************************************************");
-        System.out.println("                                                                     ");
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
         System.out.print("입력: ");
     }
 
     private static void showAddMenu(Scanner scanner, TodoList todoList, Motivation motivation, Mood mood) {
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
         System.out.println("1. 오늘 할 일 추가");
         System.out.println("2. 올해 목표 추가");
         System.out.println("3. 동기부여 추가");
         System.out.println("4. 오늘의 기분 추가");
         System.out.println("5. 이전");
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
         System.out.print("입력: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // 개행 문자 제거
@@ -102,10 +109,16 @@ public class App {
     }
 
     private static void showViewMenu(Scanner scanner, TodoList todoList, Motivation motivation, Mood mood) {
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
         System.out.println("1. 일 단위 조회");
         System.out.println("2. 월 단위 조회");
         System.out.println("3. 기분 일기 조회");
         System.out.println("4. 이전");
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
         System.out.print("입력: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // 개행 문자 제거
@@ -128,12 +141,18 @@ public class App {
     }
 
     private static void showEditMenu(Scanner scanner, TodoList todoList, Motivation motivation, Mood mood) {
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
         System.out.println("1. 오늘의 할 일 수정");
         System.out.println("2. 올해 목표 수정");
         System.out.println("3. 동기부여 수정");
         System.out.println("4. 오늘의 기분 수정");
         System.out.println("5. 완료 여부 변경");
         System.out.println("6. 이전");
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
         System.out.print("입력: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // 개행 문자 제거
@@ -162,11 +181,17 @@ public class App {
     }
 
     private static void showDeleteMenu(Scanner scanner, TodoList todoList, Motivation motivation, Mood mood) {
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
         System.out.println("1. 오늘의 할 일 삭제");
         System.out.println("2. 올해 목표 삭제");
         System.out.println("3. 동기부여 삭제");
         System.out.println("4. 오늘의 기분 삭제");
         System.out.println("5. 이전");
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
         System.out.print("입력: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // 개행 문자 제거

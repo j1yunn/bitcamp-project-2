@@ -32,7 +32,7 @@ public class Motivation {
             System.out.println((i + 1) + ". " + motivations.get(i));
         }
         int choice = scanner.nextInt();
-        scanner.nextLine();  // 개행 문자 제거0
+        scanner.nextLine();  // 개행 문자 제거
         if (choice > 0 && choice <= motivations.size()) {
             motivations.remove(choice - 1);
             System.out.println("동기부여가 삭제되었습니다.");
@@ -43,4 +43,22 @@ public class Motivation {
         }
     }
 
+    public void editMotivation(Scanner scanner) {
+        System.out.println("수정할 동기부여를 선택하세요. (0: 이전으로 돌아가기):");
+        for (int i = 0; i < motivations.size(); i++) {
+            System.out.println((i + 1) + ". " + motivations.get(i));
+        }
+        int choice = scanner.nextInt();
+        scanner.nextLine();  // 개행 문자 제거
+        if (choice > 0 && choice <= motivations.size()) {
+            System.out.print("수정할 동기부여 내용: ");
+            String updatedContent = scanner.nextLine();
+            motivations.set(choice - 1, updatedContent);
+            System.out.println("동기부여가 수정되었습니다.");
+        } else if (choice == 0) {
+            return;
+        } else {
+            System.out.println("잘못된 선택입니다.");
+        }
+    }
 }
