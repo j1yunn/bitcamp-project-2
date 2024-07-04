@@ -10,6 +10,11 @@ public class App {
         Motivation motivation = new Motivation();
         Mood mood = new Mood();
 
+        GodLifeTitleScreen.showTitleScreen();
+        GodLifeTitleScreen.waitForEnter();
+        System.out.println(GodLifeTitleScreen.GREEN + "To-do List 프로그램이 시작되었습니다." + GodLifeTitleScreen.RESET);
+
+
         // 데이터 로드
         todoList.loadData();
         motivation.loadData();
@@ -49,16 +54,6 @@ public class App {
     }
 
     private static void showMainMenu(Motivation motivation) {
-        System.out.println("********************************************************************");
-        System.out.println("                                                                    ");
-        System.out.println("████████  ██████  ██████   ██████      ██      ██ ███████ ████████ ");
-        System.out.println("   ██    ██    ██ ██   ██ ██    ██     ██      ██ ██         ██    ");
-        System.out.println("   ██    ██    ██ ██   ██ ██    ██     ██      ██ ███████    ██    ");
-        System.out.println("   ██    ██    ██ ██   ██ ██    ██     ██      ██      ██    ██    ");
-        System.out.println("   ██     ██████  ██████   ██████      ███████ ██ ███████    ██    ");
-        System.out.println("                                                                    ");
-        System.out.println("********************************************************************");
-        System.out.println("                                                                     ");
         motivation.viewRandomMotivation();  // 랜덤 동기부여 출력
         System.out.println("                                                                     ");
         System.out.println("1. 추가");
