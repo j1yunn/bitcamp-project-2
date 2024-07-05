@@ -18,11 +18,11 @@ public class Motivation {
 
     public void viewRandomMotivation() {
         if (motivations.isEmpty()) {
-            System.out.println("오늘의 문장");
+            System.out.println("⭐오늘의 문장⭐");
             System.out.println("성공은 매일 반복한 작은 노력들의 합이다. - 로버트 콜리어");
         } else {
             int index = random.nextInt(motivations.size());
-            System.out.println("오늘의 문장\n" + motivations.get(index));
+            System.out.println("⭐오늘의 문장⭐\n" + motivations.get(index));
         }
     }
 

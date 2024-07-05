@@ -16,7 +16,7 @@ public class App {
 
         GodLifeTitleScreen.showTitleScreen();
         GodLifeTitleScreen.waitForEnter();
-        System.out.println(GodLifeTitleScreen.GREEN + "To-do List 프로그램이 시작되었습니다." + GodLifeTitleScreen.RESET);
+        System.out.println(GodLifeTitleScreen.GREEN + "👉 To-do List 프로그램이 시작되었습니다 👈" + GodLifeTitleScreen.RESET);
 
 
         // 데이터 로드
@@ -59,32 +59,33 @@ public class App {
 
     private static void showMainMenu(Motivation motivation) {
         motivation.viewRandomMotivation();  // 랜덤 동기부여 출력
-        System.out.println("*********************************");
-        System.out.println("                                ");
-        System.out.println("1. 추가");
-        System.out.println("2. 조회");
-        System.out.println("3. 수정");
-        System.out.println("4. 삭제");
-        System.out.println("5. 종료");
         System.out.println("                                 ");
         System.out.println("*********************************");
         System.out.println("                                 ");
-        System.out.print("입력: ");
+        System.out.println("\u001B[33m1.\u001B[0m 추가");
+        System.out.println("\u001B[33m2.\u001B[0m 조회");
+        System.out.println("\u001B[33m3.\u001B[0m 수정");
+        System.out.println("\u001B[33m4.\u001B[0m 삭제");
+        System.out.println("\u001B[34m5. 종료\u001B[0m");
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
+        System.out.print("\u001B[33m✔️️입력: \u001B[0m");
     }
 
     private static void showAddMenu(Scanner scanner, TodoList todoList, Motivation motivation, Mood mood) {
         System.out.println("                                  ");
         System.out.println("*********************************");
         System.out.println("                                  ");
-        System.out.println("1. 오늘 할 일 추가");
-        System.out.println("2. 올해 목표 추가");
-        System.out.println("3. 동기부여 추가");
-        System.out.println("4. 오늘의 기분 추가");git
-        System.out.println("5. 이전");
+        System.out.println("\u001B[33m1.\u001B[0m 오늘 할 일 추가");
+        System.out.println("\u001B[33m2.\u001B[0m 올해 목표 추가");
+        System.out.println("\u001B[33m3.\u001B[0m 동기부여 추가");
+        System.out.println("\u001B[33m4.\u001B[0m 오늘의 기분 추가");
+        System.out.println("\u001B[34m5. 이전\u001B[0m");
         System.out.println("                                 ");
         System.out.println("*********************************");
         System.out.println("                                 ");
-        System.out.print("입력: ");
+        System.out.print("\u001B[33m✔️️입력: \u001B[0m");
         int choice = scanner.nextInt();
         scanner.nextLine();  // 개행 문자 제거
         switch (choice) {
@@ -112,14 +113,14 @@ public class App {
         System.out.println("                                 ");
         System.out.println("*********************************");
         System.out.println("                                 ");
-        System.out.println("1. 일 단위 조회");
-        System.out.println("2. 월 단위 조회");
-        System.out.println("3. 기분 일기 조회");
-        System.out.println("4. 이전");
+        System.out.println("\u001B[33m1.\u001B[0m  일 단위 조회");
+        System.out.println("\u001B[33m2.\u001B[0m  월 단위 조회");
+        System.out.println("\u001B[33m3.\u001B[0m  기분 일기 조회");
+        System.out.println("\u001B[34m4. 이전\u001B[0m");
         System.out.println("                                 ");
         System.out.println("*********************************");
         System.out.println("                                 ");
-        System.out.print("입력: ");
+        System.out.print("\u001B[33m✔️️입력: \u001B[0m");
         int choice = scanner.nextInt();
         scanner.nextLine();  // 개행 문자 제거
         switch (choice) {
@@ -144,16 +145,16 @@ public class App {
         System.out.println("                                 ");
         System.out.println("*********************************");
         System.out.println("                                 ");
-        System.out.println("1. 오늘의 할 일 수정");
-        System.out.println("2. 올해 목표 수정");
-        System.out.println("3. 동기부여 수정");
-        System.out.println("4. 오늘의 기분 수정");
-        System.out.println("5. 완료 여부 변경");
-        System.out.println("6. 이전");
+        System.out.println("\u001B[33m1.\u001B[0m 오늘의 할 일 수정");
+        System.out.println("\u001B[33m2.\u001B[0m 올해 목표 수정");
+        System.out.println("\u001B[33m3.\u001B[0m 동기부여 수정");
+        System.out.println("\u001B[33m4.\u001B[0m 오늘의 기분 수정");
+        System.out.println("\u001B[33m5.\u001B[0m 완료 여부 변경");
+        System.out.println("\u001B[34m6. 이전\u001B[0m");
         System.out.println("                                 ");
         System.out.println("*********************************");
         System.out.println("                                 ");
-        System.out.print("입력: ");
+        System.out.print("\u001B[33m✔️️입력: \u001B[0m");
         int choice = scanner.nextInt();
         scanner.nextLine();  // 개행 문자 제거
         switch (choice) {
@@ -184,15 +185,15 @@ public class App {
         System.out.println("                                 ");
         System.out.println("*********************************");
         System.out.println("                                 ");
-        System.out.println("1. 오늘의 할 일 삭제");
-        System.out.println("2. 올해 목표 삭제");
-        System.out.println("3. 동기부여 삭제");
-        System.out.println("4. 오늘의 기분 삭제");
-        System.out.println("5. 이전");
+        System.out.println("\u001B[33m1.\u001B[0m 오늘의 할 일 삭제");
+        System.out.println("\u001B[33m2.\u001B[0m 올해 목표 삭제");
+        System.out.println("\u001B[33m3.\u001B[0m 동기부여 삭제");
+        System.out.println("\u001B[33m4.\u001B[0m 오늘의 기분 삭제");
+        System.out.println("\u001B[34m6. 이전\u001B[0m");
         System.out.println("                                 ");
         System.out.println("*********************************");
         System.out.println("                                 ");
-        System.out.print("입력: ");
+        System.out.print("\u001B[33m✔️️입력: \u001B[0m");
         int choice = scanner.nextInt();
         scanner.nextLine();  // 개행 문자 제거
         switch (choice) {

@@ -11,15 +11,21 @@ public class Mood {
     public void addMood(Scanner scanner) {
         System.out.print("날짜 (YYYY-MM-DD): ");
         String date = scanner.nextLine();
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
         System.out.println("기분 선택:");
-        System.out.println("1. HAPPY");
-        System.out.println("2. MEH");
-        System.out.println("3. SAD");
-        System.out.println("4. STRESSED");
-        System.out.println("5. PRODUCTIVE");
-        System.out.println("6. TIRED");
-        System.out.println("7. CONTENT");
-        System.out.print("기분 번호 선택: ");
+        System.out.println("1. HAPPY😄");
+        System.out.println("2. MEH😐");
+        System.out.println("3. SAD😭");
+        System.out.println("4. STRESSED😫");
+        System.out.println("5. PRODUCTIVE😏");
+        System.out.println("6. TIRED😪");
+        System.out.println("7. CONTENT😏");
+        System.out.println("                                 ");
+        System.out.println("*********************************");
+        System.out.println("                                 ");
+        System.out.print("\u001B[33m✔️입력:  \u001B[0m");
         int moodNumber = scanner.nextInt();
         scanner.nextLine();  // 개행 문자 제거
         String mood;
@@ -66,14 +72,21 @@ public class Mood {
         if (moodMap.containsKey(date)) {
             System.out.println("기존 기분: " + moodMap.get(date));
             System.out.println("수정할 기분 선택:");
-            System.out.println("1. HAPPY");
-            System.out.println("2. MEH");
-            System.out.println("3. SAD");
-            System.out.println("4. STRESSED");
-            System.out.println("5. PRODUCTIVE");
-            System.out.println("6. TIRED");
-            System.out.println("7. CONTENT");
-            System.out.print("입력: ");
+            System.out.println("                                 ");
+            System.out.println("*********************************");
+            System.out.println("                                 ");
+            System.out.println("기분 선택:");
+            System.out.println("1. HAPPY😄");
+            System.out.println("2. MEH😐");
+            System.out.println("3. SAD😭");
+            System.out.println("4. STRESSED😫");
+            System.out.println("5. PRODUCTIVE😏");
+            System.out.println("6. TIRED😪");
+            System.out.println("7. CONTENT😏");
+            System.out.println("                                 ");
+            System.out.println("*********************************");
+            System.out.println("                                 ");
+            System.out.print("\u001B[33m✔️입력:  \u001B[0m");
             int moodNumber = scanner.nextInt();
             scanner.nextLine();  // 개행 문자 제거
             String mood;
