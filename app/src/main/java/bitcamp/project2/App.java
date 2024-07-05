@@ -73,13 +73,13 @@ public class App {
     }
 
     private static void showAddMenu(Scanner scanner, TodoList todoList, Motivation motivation, Mood mood) {
-        System.out.println("                                 ");
+        System.out.println("                                  ");
         System.out.println("*********************************");
-        System.out.println("                                 ");
+        System.out.println("                                  ");
         System.out.println("1. 오늘 할 일 추가");
         System.out.println("2. 올해 목표 추가");
         System.out.println("3. 동기부여 추가");
-        System.out.println("4. 오늘의 기분 추가");
+        System.out.println("4. 오늘의 기분 추가");git
         System.out.println("5. 이전");
         System.out.println("                                 ");
         System.out.println("*********************************");
